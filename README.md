@@ -1,6 +1,6 @@
 # Anonime
 
-Project Description.
+Anonime is an anime movie and manga collection web application.
 
 ## Live version
 
