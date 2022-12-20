@@ -2,6 +2,8 @@
 
 Anonime is an anime movie and manga collection web application.
 
+![](https://i.ibb.co/GJ1ZLWx/Thumbnails-1.jpg)
+
 ## Live version
 
 This project is yet to be deployed.
