@@ -1,3 +1,3 @@
 # Welcome
 
-Welcome to the Anonime Documentation, the open source alternative to [MyAnimeList](https://myanimelist.net)
+Welcome to the Anonime Documentation. The anime and manga collection just like [MyAnimeList](https://myanimelist.net)
