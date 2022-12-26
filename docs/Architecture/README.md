@@ -1,5 +1,7 @@
 # Architecture of Anonime
 
+![Architecture Diagram](https://i.ibb.co/TRGwNSX/Architecture.png)
+
 ## How is data fetched?
 
 All of the data is fetched from the [Jikan API](https://jikan.moe/) to the [React](https://github.com/ibrahimraimi/anonime) Frontend directly through a secure connection!
