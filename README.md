@@ -5,13 +5,7 @@ Anonime is an anime movie and manga collection web application.
 ![](https://i.ibb.co/GJ1ZLWx/Thumbnails-1.jpg)
 
 ## Live version
-
-This project is yet to be deployed.
-
-## Project Workflow
-![photo](https://i.ibb.co/rfPHnzP/Anonime.png)
--
-[Full Workflow](https://www.figma.com/file/TTU7CEX8tFBsLcyuEgcVFB/Anonime?node-id=0%3A1&t=VqNtBZwVDdhlM2qX-1)
+[Website](https://anonime-ng.vercel.app)
 
 ## Feedback and Bugs
 
