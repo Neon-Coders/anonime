@@ -24,10 +24,5 @@ module.exports = {
         "spaced-comment": "error",
         "quotes": ["error", "single"],
         "no-duplicate-imports": "error"
-        "react/prop-types": "off",
-        // suppress errors for missing 'import React' in files
-        "react/react-in-jsx-scope": "off",
-        // allow tsx syntax in js files (for next.js project)
-        "react/jsx-filename-extension": [1, { extensions: [".ts", ".tsx"] }]
     }
 }
