@@ -1,0 +1,3 @@
+import { FETCH_TOP_ANIME, BASE_URL, FETCH_RANDOM_ANIME } from './requests';
+
+export { FETCH_TOP_ANIME, FETCH_RANDOM_ANIME, BASE_URL };
