@@ -1,9 +1,9 @@
 import { FC, useState } from "react";
 import { Link } from "react-router-dom";
-import Search from "../Search/Search";
 
 const Navbar: FC = () => {
 	const [isOpen, setIsOpen] = useState<boolean>(false);
+	const [isLoggedIn, setIsLoggedIn] = useState(false);
 	return (
 		<nav className="inset-x-0 w-full z-20">
 			<div className="mt-8">
@@ -49,12 +49,13 @@ const Navbar: FC = () => {
 												Manga
 											</Link>
 										</li>
+
 										<li>
 											<Link
-												to="/"
+												to="/search"
 												className="text-gray-500 hover:text-gray-100 transition-all duration-200 ease-out cursor-pointer"
 											>
-												Collections
+												Search Anime
 											</Link>
 										</li>
 									</ul>
@@ -63,9 +64,35 @@ const Navbar: FC = () => {
 						</div>
 					)}
 
-					{/* TODO: Search */}
+					{/* TODO: Auth */}
 					<div className="hidden ml-auto lg:flex">
-						<Search />
+						<div className="flex cursor-pointer">
+							{isLoggedIn ? (
+								<img
+									alt=""
+									className="w-10 h-10 rounded-full ring-2 ring-offset-4 dark:bg-gray-500 ring-offset-gray-800 transition duration-200 ease-out md:hover:scale-105"
+									src="https://i.ibb.co/M5YtTdP/profile-pic.png"
+								/>
+							) : (
+								<div className="sm:flex sm:gap-4">
+									<Link
+										to="/login"
+										className="text-gray-500 hover:text-gray-100 transition-all duration-200 ease-out cursor-pointer"
+									>
+										Login
+									</Link>
+
+									<div className="hidden sm:flex">
+										<Link
+											to="/signup"
+											className="text-gray-500 hover:text-gray-100 transition-all duration-200 ease-out cursor-pointer"
+										>
+											Sign Up
+										</Link>
+									</div>
+								</div>
+							)}
+						</div>
 					</div>
 				</div>
 			</div>
