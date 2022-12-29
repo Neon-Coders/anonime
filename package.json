@@ -10,10 +10,12 @@
     "prepare": "husky install"
   },
   "dependencies": {
+    "@heroicons/react": "^2.0.13",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.4.5",
-    "swr": "^2.0.0"
+    "swr": "^2.0.0",
+    "tailwind-scrollbar-hide": "^1.1.7"
   },
   "devDependencies": {
     "@types/react": "^18.0.26",
@@ -34,6 +36,6 @@
   },
   "lint-staged": {
     "src/**/*.{ts,tsx}": "prettier --write",
-    "src/**/*.ts": "eslint --fix"
+    "src/**/*.ts": "eslint"
   }
 }
