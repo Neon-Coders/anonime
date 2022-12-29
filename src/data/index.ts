@@ -1,4 +1,3 @@
-import TopAnime from './TopAnime';
-import RandomAnime from './RandomAnime';
+import TopAnime from "./TopAnime";
 
-export { TopAnime, RandomAnime };
+export { TopAnime };

@@ -1,6 +1,7 @@
-import { Search } from '../components';
-import { TopAnime, RandomAnime } from '../data';
-import Home from './Home/Home';
-import Manga from './Manga/Manga';
+import { Search } from "../components";
+import { TopAnime } from "../data";
+import Home from "./Home/Home";
+import Manga from "./Manga/Manga";
+import SearchAnime from "./SearchAnime/SearchAnime";
 
-export { Home, Manga, Search, TopAnime, RandomAnime };
+export { Home, Manga, Search, TopAnime, SearchAnime };

@@ -16,7 +16,7 @@ const Search: FC = () => {
 				<input
 					className="font-medium py-2 px-6 rounded-full bg-gray-700 text-white outline-none border-none w-full lg:w-auto"
 					type="text"
-					placeholder="Search anime or movie"
+					placeholder="Search anime or manga"
 				/>
 			</form>
 		</>

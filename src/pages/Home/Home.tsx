@@ -1,6 +1,5 @@
 import { FC } from "react";
-import { Search } from "../index";
-import { TopAnime, RandomAnime } from "../index";
+import { TopAnime } from "../index";
 
 const Home: FC = () => {
 	return (
@@ -10,23 +9,8 @@ const Home: FC = () => {
 				What are you gonna watch today
 			</p>
 
-			<span className="lg:hidden">
-				<Search />
-			</span>
-
 			<div>
-				<div>
-					<h2 className="text-2xl text-white font-semibold mt-8 mb-5">
-						Top Anime
-					</h2>
-					<TopAnime />
-				</div>
-				<div>
-					<h2 className="text-2xl text-white font-semibold mt-8 mb-5">
-						All Anime
-					</h2>
-					<RandomAnime />
-				</div>
+				<TopAnime />
 			</div>
 		</div>
 	);
