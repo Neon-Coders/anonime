@@ -1,7 +1,7 @@
 import { Search } from "../components";
 import { TopAnime } from "../data";
-import Home from "./Home/Home";
-import Manga from "./Manga/Manga";
-import SearchAnime from "./SearchAnime/SearchAnime";
+import Home from "./Home";
+import Manga from "./Manga";
+import SearchAnime from "./SearchAnime";
 
 export { Home, Manga, Search, TopAnime, SearchAnime };

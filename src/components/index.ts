@@ -1,10 +1,10 @@
-import PageNotFound from "./Error/PageNotFound";
-import ServerError from "./Error/ServerError";
-import Loader from "./Loader/Loader";
-import Navbar from "./Navbar/Navbar";
-import Register from "./Register/Register";
-import Search from "./Search/Search";
-import SharedLayout from "./SharedLayout/SharedLayout";
+import PageNotFound from "./PageNotFound";
+import ServerError from "./ServerError";
+import Loader from "./Loader";
+import Navbar from "./Navbar";
+import Register from "./Register";
+import Search from "./Search";
+import SharedLayout from "./SharedLayout";
 
 export {
 	Search,
