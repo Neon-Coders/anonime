@@ -1,7 +1,7 @@
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+/* eslint-disable @typescript-eslint/ban-ts-comment */
 // @ts-nocheck
 import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/outline";
-import { useRef, useState } from "react";
+import { useRef, useState, FC } from "react";
 import useSWR, { Fetcher } from "swr";
 import { Loader, ServerError } from "../components";
 import { FETCH_TOP_ANIME } from "../utils";
@@ -14,7 +14,7 @@ import { FETCH_TOP_ANIME } from "../utils";
 const fetcher = (...args: Fetcher[]) =>
 	fetch(...args).then((response) => response.json());
 
-const TopAnime: React.FC = () => {
+const TopAnime: FC = () => {
 	/* A hook that is used to fetch data from an API. */
 	const { data, isLoading, error } = useSWR(FETCH_TOP_ANIME, fetcher, {
 		suspense: true,
