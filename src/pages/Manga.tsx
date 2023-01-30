@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { TopManga } from "../data";
+import { TopManga } from "./index";
 
 const Manga: FC = () => {
 	return (
