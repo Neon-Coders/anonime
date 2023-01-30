@@ -2,7 +2,7 @@ import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/outline";
 import { useRef, useState, FC } from "react";
 import useSWR, { Fetcher } from "swr";
 import { Loader, ServerError } from "../components";
-import { FETCH_TOP_ANIME } from "../utils";
+import { SEASONS_OUT } from "../utils";
 import { Link } from "react-router-dom";
 
 /**
@@ -13,14 +13,14 @@ import { Link } from "react-router-dom";
 const fetcher = (...args: Fetcher[]) =>
 	fetch(...args).then((response) => response.json());
 
-const TopAnime: FC = () => {
+const NewSeasons: FC = () => {
 	/* A hook that is used to fetch data from an API. */
-	const { data, isLoading, error } = useSWR(FETCH_TOP_ANIME, fetcher, {
+	const { data, isLoading, error } = useSWR(SEASONS_OUT, fetcher, {
 		suspense: true,
 	});
 
 	const topAnime: [] = data.data;
-	const title = "Top Anime";
+	const title = "New Series";
 
 	if (isLoading) return <Loader />;
 	if (error) return <ServerError />;
@@ -92,4 +92,4 @@ const TopAnime: FC = () => {
 	);
 };
 
-export default TopAnime;
+export default NewSeasons;

@@ -1,10 +1,18 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
 import { FC, useState } from "react";
 import { Link } from "react-router-dom";
+import { useAuthState } from "react-firebase-hooks/auth";
+import { auth } from "../firebase/firebase";
+import { signOut } from "firebase/auth";
+import { MdVerified } from "react-icons/md";
 
 const Navbar: FC = () => {
+	const [user] = useAuthState(auth);
+	const SignOut = () => {
+		signOut(auth);
+	};
+
 	const [isOpen, setIsOpen] = useState<boolean>(false);
-	const [isLoggedIn, setIsLoggedIn] = useState(false);
+
 	return (
 		<nav className="inset-x-0 w-full z-20">
 			<div className="mt-8">
@@ -44,15 +52,6 @@ const Navbar: FC = () => {
 									<ul className="px-6 pt-32 text-gray-700 space-y-8 md:px-12 lg:space-y-0 lg:flex lg:space-x-12 lg:pt-0">
 										<li>
 											<Link
-												to="/manga"
-												className="text-gray-500 hover:text-gray-100 transition-all duration-200 ease-out cursor-pointer"
-											>
-												Manga
-											</Link>
-										</li>
-
-										<li>
-											<Link
 												to="/search"
 												className="text-gray-500 hover:text-gray-100 transition-all duration-200 ease-out cursor-pointer"
 											>
@@ -65,32 +64,37 @@ const Navbar: FC = () => {
 						</div>
 					)}
 
-					{/* TODO: Auth */}
 					<div className="hidden ml-auto lg:flex">
-						<div className="flex cursor-pointer">
-							{isLoggedIn ? (
-								<img
-									alt=""
-									className="w-10 h-10 rounded-full ring-2 ring-offset-4 dark:bg-gray-500 ring-offset-gray-800 transition duration-200 ease-out md:hover:scale-105"
-									src="https://i.ibb.co/M5YtTdP/profile-pic.png"
-								/>
+						<div className="flex">
+							{user ? (
+								<>
+									<img
+										alt={user.displayName}
+										className="w-10 h-10 rounded-full ring-2 ring-offset-4 dark:bg-gray-500 ring-offset-gray-800 transition duration-200 ease-out md:hover:scale-105"
+										src={user.photoURL}
+									/>
+
+									<div className="font-medium text-white pl-5">
+										<div className="flex items-center">
+											{user.displayName}{" "}
+											<MdVerified className="ml-2 text-[#00acee]" />
+										</div>
+										<div
+											className="text-sm text-gray-500 dark:text-gray-400 hover:text-white cursor-pointer"
+											onClick={SignOut}
+										>
+											Sign Out
+										</div>
+									</div>
+								</>
 							) : (
 								<div className="sm:flex sm:gap-4">
 									<Link
 										to="/login"
 										className="text-gray-500 hover:text-gray-100 transition-all duration-200 ease-out cursor-pointer"
 									>
-										Login
+										Sign In
 									</Link>
-
-									<div className="hidden sm:flex">
-										<Link
-											to="/signup"
-											className="text-gray-500 hover:text-gray-100 transition-all duration-200 ease-out cursor-pointer"
-										>
-											Sign Up
-										</Link>
-									</div>
 								</div>
 							)}
 						</div>

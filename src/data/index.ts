@@ -1,5 +1,7 @@
+import NewSeasons from "./NewSeasons";
+import Seasons from "./Seasons";
+import SeasonsUpcoming from "./SeasonsUpcoming";
 import TopAnime from "./TopAnime";
-import RandomAnime from "./RandomAnime";
 import TopManga from "./TopManga";
 
-export { TopAnime, RandomAnime, TopManga };
+export { TopAnime, SeasonsUpcoming, TopManga, NewSeasons, Seasons };
