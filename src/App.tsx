@@ -2,9 +2,9 @@ import { FC, Suspense } from "react";
 import { Route, Routes } from "react-router-dom";
 
 import {
+	Loader,
 	PageNotFound,
 	Register,
-	ServerError,
 	SharedLayout,
 	SingleAnime,
 } from "./components";
@@ -12,7 +12,7 @@ import { Home, Manga, SearchAnime } from "./pages";
 
 const App: FC = () => {
 	return (
-		<Suspense fallback={<ServerError />}>
+		<Suspense fallback={<Loader />}>
 			<main className="px-8 lg:px-[5rem]">
 				<Routes>
 					<Route path="/" element={<SharedLayout />}>
