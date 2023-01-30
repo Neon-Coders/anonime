@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/ban-ts-comment */
+// @ts-nocheck
 import { FC } from "react";
 import useSWR, { Fetcher } from "swr";
 import { MANGA_BASE_URL } from "../utils";

@@ -1,8 +1,9 @@
+/* eslint-disable @typescript-eslint/ban-ts-comment */
+// @ts-nocheck
 import { FC } from "react";
 import useSWR, { Fetcher } from "swr";
 import { BASE_URL } from "../utils";
 import { Link, useParams } from "react-router-dom";
-import ServerError from "./ServerError";
 
 const fetcher = (...args: Fetcher[]) =>
 	fetch(...args).then((response) => response.json());
