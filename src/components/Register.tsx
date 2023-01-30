@@ -41,17 +41,6 @@ const Register: FC = () => {
 							Continue with Google
 						</p>
 					</button>
-
-					<button
-						aria-label="Continue with google"
-						role="button"
-						className="focus:outline-none focus:ring-2 focus:ring-offset-1 focus:ring-gray-100 py-3.5 px-4 border rounded-lg border-gray-100 flex items-center w-full mt-10"
-					>
-						<SiTwitter className="text-2xl text-[#00acee]" />
-						<p className="text-base font-medium ml-4 text-gray-100">
-							Continue with Twitter
-						</p>
-					</button>
 				</div>
 			</div>
 		</section>
