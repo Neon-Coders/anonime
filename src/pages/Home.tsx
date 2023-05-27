@@ -10,10 +10,12 @@ const Home: FC = () => {
 			</p>
 
 			<main>
+				<NewSeasons />
+				<SeasonsUpcoming />
 				<TopAnime />
 				<Seasons />
-				<SeasonsUpcoming />
-				<NewSeasons />
+				
+				
 			</main>
 		</div>
 	);
