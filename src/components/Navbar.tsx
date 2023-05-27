@@ -66,41 +66,6 @@ const Navbar: FC = () => {
 						</div>
 					)}
 
-					<div className="hidden ml-auto lg:flex">
-						<div className="flex">
-							{user ? (
-								<>
-									<img
-										alt={user.displayName}
-										className="w-10 h-10 rounded-full ring-2 ring-offset-4 dark:bg-gray-500 ring-offset-gray-800 transition duration-200 ease-out md:hover:scale-105"
-										src={user.photoURL}
-									/>
-
-									<div className="font-medium text-white pl-5">
-										<div className="flex items-center">
-											{user.displayName}{" "}
-											<MdVerified className="ml-2 text-[#00acee]" />
-										</div>
-										<div
-											className="text-sm text-gray-500 dark:text-gray-400 hover:text-white cursor-pointer"
-											onClick={SignOut}
-										>
-											Sign Out
-										</div>
-									</div>
-								</>
-							) : (
-								<div className="sm:flex sm:gap-4">
-									<Link
-										to="/login"
-										className="text-gray-500 hover:text-gray-100 transition-all duration-200 ease-out cursor-pointer"
-									>
-										Sign In
-									</Link>
-								</div>
-							)}
-						</div>
-					</div>
 				</div>
 			</div>
 		</nav>
